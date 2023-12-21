@@ -7,11 +7,11 @@ import java.util.Scanner;
 public class Main {
     public static void main(String[] args) {
         System.out.println("--------FFMPEG CLI--------");
-        System.out.println("1️⃣ Convert Video to audio");
-        System.out.println("2️⃣ Encode Soft Subtitle into Video");
-        System.out.println("3️⃣ Burn Subtitle into Video");
-        System.out.println("4️⃣ Extract Subtitle from Video");
-        System.out.println("5️⃣ Exit");
+        System.out.println("1) Convert Video to audio");
+        System.out.println("2) Encode Soft Subtitle into Video");
+        System.out.println("3) Burn Subtitle into Video");
+        System.out.println("4) Extract Subtitle from Video");
+        System.out.println("5) Exit");
 
         Scanner sc = new Scanner(System.in);
         System.out.println("Enter Choice:");
