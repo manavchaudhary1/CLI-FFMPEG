@@ -7,6 +7,27 @@ JAR_NAME="FFMPEG_CLI.jar"
 MANIFEST_FILE="Manifest.txt"
 JAR_FOLDER="jar"
 
+clear
+
+#figlet -c "FFMPEG_CLI" Not available in Windows
+echo "Building CLI-FFMPEG"
+echo
+echo  "    ______  _        _____           _______  _______  ______   ______  _______  ______   "
+echo  "   / _____)| |      (_____)         (_______)(_______)|  ___ \ (_____ \(_______)/ _____)  "
+echo  "  | /      | |         _      ___    _____    _____   | | _ | | _____) )_____  | /  ___   "
+echo  "  | |      | |        | |    (___)  |  ___)  |  ___)  | || || ||  ____/|  ___) | | (___)  "
+echo  "  | \_____ | |_____  _| |_          | |      | |      | || || || |     | |_____| \____/|  "
+echo  "   \______)|_______)(_____)         |_|      |_|      |_||_||_||_|     |_______)\_____/   "
+
+
+###########################################################################
+#Script Name : build.sh
+#Description : Used to build JAR file of java files from source directories
+#Creation Date : 12-20-2023
+#Author      : Manav
+#Email       : manavchaudhary041@gmail.com
+###########################################################################
+
 # Create output directory if it doesn't exist
 mkdir -p "$OUTPUT_DIR"
 
