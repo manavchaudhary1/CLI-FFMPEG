@@ -78,7 +78,8 @@ java -jar FFMPEG-CLI.jar
 ```
 
 *Samples are provided in sample folder*
-Make sure when running cmds Location of files are strictly correct
+Make sure when running cmds 
+Location of files are strictly correct
 ``` drive name:/path/to/your/project/sample/dwsample.webm```
 
 **If any issue occur please raise issue**
