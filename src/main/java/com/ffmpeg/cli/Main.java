@@ -6,7 +6,7 @@ import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
-        System.out.println("--FFMPEG CLI--");
+        System.out.println("--------FFMPEG CLI--------");
         System.out.println("1️⃣ Convert Video to audio");
         System.out.println("2️⃣ Encode Soft Subtitle into Video");
         System.out.println("3️⃣ Burn Subtitle into Video");
@@ -58,6 +58,7 @@ public class Main {
                     System.out.println("Invalid Choice");
                     break;
             }
+            System.out.println("Operation Successfull!");
         } catch (FileNotFoundException e) {
             System.out.println("File not found: " + e.getMessage());
         } catch (IOException e) {
