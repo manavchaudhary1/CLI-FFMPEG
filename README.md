@@ -5,6 +5,7 @@ Used for simple ffmpeg commands
 **Installation Process**
 
 ~Make sure java is installed in your system  i'm using java21.
+
 ~Make sure FFMPEG is installed in your system
 
 Right now i'm not providing FFMPEG lib with project 
