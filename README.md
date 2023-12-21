@@ -77,7 +77,7 @@ if not then please manually change path of "FFMPEG_PATH" variable  in src/main/j
 
 **Linux/WSL**
 
-make sure you are in root directory of projet
+make sure you are in root directory of project
 
 ```
 chmod +x build.sh
