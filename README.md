@@ -2,7 +2,7 @@
 FFMPEG based CLI Application using JAVA
 Used for simple ffmpeg commands
 
-**Installation Process**
+***Installation Process***
 
 ~Make sure java is installed in your system  i'm using java21.
 
@@ -55,7 +55,7 @@ choco || choco -?
 
 >You can also refer to there official page for setup [CHOCOLATEY](https://docs.chocolatey.org/en-us/choco/setup)
 
-*Now install ffmpeg*
+**Now install ffmpeg**
 
 Make sure to run teminal in adminstrative mode
 
@@ -97,7 +97,7 @@ bash build.sh
 ./build.sh
 ```
 
-**Running**
+***Running***
 
 ```
 cd jar
