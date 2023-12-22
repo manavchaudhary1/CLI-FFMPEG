@@ -1,7 +1,6 @@
 package com.ffmpeg.cli.FFMPEGCommands;
 
 import com.ffmpeg.cli.ProcessBuild;
-
 import java.io.IOException;
 
 public class BurnSubtitle {
