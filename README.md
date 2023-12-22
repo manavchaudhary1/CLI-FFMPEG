@@ -4,7 +4,7 @@ Used for simple ffmpeg commands
 
 ***Installation Process***
 
-~Make sure java is installed in your system  i'm using java21.
+~Make sure java is installed in your system  (i'm using java21).
 
 ~Make sure FFMPEG is installed in your system
 
@@ -71,13 +71,11 @@ ffmpeg
 
 >choco will install ffmpeg in "C:\ProgramData\chocolatey\bin\ffmpeg.exe"
 
-if not then please manually change path of "FFMPEG_PATH" variable  in src/main/java/com/ffmpeg/cli/FFMPEGCommands.java
-
 ***Building Process***
 
-**Linux/WSL**
+Make sure you are in root directory of project
 
-make sure you are in root directory of project
+**Linux/WSL**
 
 ```
 chmod +x build.sh
@@ -113,7 +111,7 @@ Make sure when running cmds
 
 Location of files are strictly correct
 ``` 
-drive name:/path/to/your/project/sample/dwsample.webm
+drive name  D:/path/to/your/project/sample/dwsample.webm
 ```
 
 **If any issue occur please raise issue**
