@@ -5,7 +5,7 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
 
-public class RunCommand {
+public class ProcessBuild {
     public static void executeCommand(String command) throws IOException {
         ProcessBuilder processBuilder = new ProcessBuilder(command.split("\\s+"));
         processBuilder.redirectErrorStream(true);  // Redirect error stream to input stream

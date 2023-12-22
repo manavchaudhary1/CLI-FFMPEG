@@ -8,21 +8,21 @@ public class FFMPEGCommands{
     public static void convertVideoToAudio(String inputFilePath, String outputFilePath) throws IOException {
         String ffmpegCommand ="ffmpeg -i " + inputFilePath + " -vn -c:a aac -strict experimental " + outputFilePath;
         // Execute the FFMPEG command
-        RunCommand.executeCommand(ffmpegCommand);
+        ProcessBuild.executeCommand(ffmpegCommand);
     }
 
     public static void encodeSoftSubtitleIntoVideo(String inputFilePath, String outputFilePath,String inputFilePathSub) throws IOException {
         String ffmpegCommand ="ffmpeg -i " + inputFilePath + " -i " + inputFilePathSub + " -c:s mov_text -c:v libx264 -c:a copy " + outputFilePath;
-        RunCommand.executeCommand(ffmpegCommand);
+        ProcessBuild.executeCommand(ffmpegCommand);
     }
 
     public static void burnSubtitleIntoVideo(String inputFilePath, String inputFilePathSub, String outputFilePath) throws IOException {
         String ffmpegCommand = "ffmpeg -i " + inputFilePath + " -vf subtitles=" + inputFilePathSub + " " + outputFilePath;
-        RunCommand.executeCommand(ffmpegCommand);
+        ProcessBuild.executeCommand(ffmpegCommand);
     }
 
     public static void extractSubtitleFromVideo(String inputFilePath, String outputFilePath) throws IOException {
         String ffmpegCommand = "ffmpeg -i " + inputFilePath + " -c:s srt " + outputFilePath;
-        RunCommand.executeCommand(ffmpegCommand);
+        ProcessBuild.executeCommand(ffmpegCommand);
     }
 }
