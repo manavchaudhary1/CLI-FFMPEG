@@ -45,7 +45,7 @@ if [ $? -eq 0 ]; then
 
     # Check if JAR creation was successful
     if [ $? -eq 0 ]; then
-        echo "JAR file created successfully: $JAR_NAME"
+        echo "JAR file created successfully: $JAR_FOLDER/$JAR_NAME"
     else
         echo "Error creating JAR file."
     fi
