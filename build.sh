@@ -33,8 +33,7 @@ mkdir -p "$OUTPUT_DIR"
 
 # Compiling Java source files
 echo "Compiling..."
-javac -d "$OUTPUT_DIR" -sourcepath "$SOURCE_DIR" "$SOURCE_DIR"/main/java/com/ffmpeg/cli/*.java
-
+javac -d "$OUTPUT_DIR" -sourcepath "$SOURCE_DIR" "$SOURCE_DIR"/main/java/com/ffmpeg/cli/*.java "$SOURCE_DIR"/main/java/com/ffmpeg/cli/FFMPEGCommands/*.java
 # Check if compilation was successful
 if [ $? -eq 0 ]; then
     echo "Compilation successful."
