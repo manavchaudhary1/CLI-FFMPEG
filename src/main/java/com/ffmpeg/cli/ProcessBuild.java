@@ -15,7 +15,7 @@ public class ProcessBuild {
 
             // Read the combined output and error streams
             try (InputStream inputStream = process.getInputStream();
-                 InputStreamReader inputStreamReader = new InputStreamReader(inputStream);
+                     InputStreamReader inputStreamReader = new InputStreamReader(inputStream);
                  BufferedReader bufferedReader = new BufferedReader(inputStreamReader)) {
 
                 String line;

@@ -82,6 +82,7 @@ public class Switch {
                     break;
             }
             System.out.println("Operation Successfull!");
+            sc.close();
         } catch (FileNotFoundException e) {
             System.out.println("File not found: " + e.getMessage());
         } catch (IOException e) {
