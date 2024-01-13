@@ -37,7 +37,7 @@ The script has Windows-style line endings (CRLF), which can cause "command not f
 
 To fix this issue, you can convert the line endings to Unix-style (LF).
 
->>You can use the dos2unix or sed command to do this.
+>You can use the dos2unix or sed command to do this.
 
 using dos2unix:
 ```
