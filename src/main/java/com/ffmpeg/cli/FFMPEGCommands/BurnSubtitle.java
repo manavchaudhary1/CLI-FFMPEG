@@ -11,7 +11,7 @@ public class BurnSubtitle {
         String projectPath = projectPathWithJAR.replace("jar","");
 
         // Construct the ffmpegPath using the projectPath
-        String ffmpegPath = projectPath + "/lib/ffmpeg/bin/ffmpeg.exe";
+        String ffmpegPath = projectPath + "/lib/ffmpeg/bin/ffmpeg";
 
         //Output File Location
         String outputFilePath = projectPath+"/output/"+outputFileName;
