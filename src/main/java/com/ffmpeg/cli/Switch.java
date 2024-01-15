@@ -29,10 +29,10 @@ public class Switch {
                     System.out.println("Enter location of video with ext:");
                     String inputFilePathAudio = sc.next();
 
-                    System.out.println("Enter location where you want output with file name & '.aac' ext:");
-                    String outputFilePathAudio = sc.next();
+                    System.out.println("Enter output file name with'.aac' ext:");
+                    String outputFileNameAudio = sc.next();
 
-                    ConvertToAudio.convertVideoToAudio(inputFilePathAudio, outputFilePathAudio);
+                    ConvertToAudio.convertVideoToAudio(inputFilePathAudio, outputFileNameAudio);
                     break;
                 case 2:
                     //Encode Soft subs to video
@@ -42,10 +42,11 @@ public class Switch {
                     System.out.println("Enter location of soft subtitle with ext:");
                     String inputFilePathSubEncode = sc.next();
 
-                    System.out.println("Enter location where you want output with file name & ext:");
-                    String outputFilePathEncode = sc.next();
+                    System.out.println("----Right now only mp4 & mkv are only supported----");
+                    System.out.println("Enter file name & ext:");
+                    String outputFileNameEncode = sc.next();
 
-                    AddSoftSubtitle.encodeSoftSubtitleIntoVideo(inputFilePathEncode, outputFilePathEncode, inputFilePathSubEncode);
+                    AddSoftSubtitle.encodeSoftSubtitleIntoVideo(inputFilePathEncode, outputFileNameEncode, inputFilePathSubEncode);
                     break;
                 case 3:
                     //Encode Hard subs to video
@@ -58,10 +59,10 @@ public class Switch {
                     System.out.println("Enter location of soft subtitle with ext:");
                     String inputFilePathSubBurn = sc.next();
 
-                    System.out.println("Enter location where you want output with file name & ext:");
-                    String outputFilePathBurn = sc.next();
+                    System.out.println("Enter file name & ext:");
+                    String outputFileBurn = sc.next();
 
-                    BurnSubtitle.burnSubtitleIntoVideo(inputFilePathBurn, inputFilePathSubBurn, outputFilePathBurn);
+                    BurnSubtitle.burnSubtitleIntoVideo(inputFilePathBurn, inputFilePathSubBurn, outputFileBurn);
                     break;
 
                 case 4:
@@ -69,14 +70,15 @@ public class Switch {
                     System.out.println("Enter location of video with ext:");
                     String inputFilePathExtract = sc.next();
 
-                    System.out.println("Enter location where you want output with file name & '.srt' ext:");
-                    String outputFilePathExtract = sc.next();
+                    System.out.println("Enter file name & '.srt' ext:");
+                    String outputFileNameExtract = sc.next();
 
-                    ExtractSubtitle.extractSubtitleFromVideo(inputFilePathExtract, outputFilePathExtract);
+                    ExtractSubtitle.extractSubtitleFromVideo(inputFilePathExtract, outputFileNameExtract);
                     break;
                 case 5:
-                    System.out.println("Exited Successfully");
-                    return;
+                    System.out.println("Exited Successfully....");
+                    System.exit(0);
+                    break;
                 default:
                     System.out.println("Invalid Choice");
                     break;

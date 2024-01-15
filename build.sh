@@ -21,7 +21,7 @@ echo  "   \______)|_______)(_____)         |_|      |_|      |_||_||_||_|     |_
 
 
 ###########################################################################
-#Script Name : build&run.sh
+#Script Name : build.sh
 #Description : Used to build JAR file of java files from source directories
 #Creation Date : 12-20-2023
 #Author      : Manav
