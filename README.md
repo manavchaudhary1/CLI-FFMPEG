@@ -33,8 +33,23 @@ Make sure you are in root directory of project
 ```
 chmod +x build.sh
 ```
+The script has Windows-style line endings (CRLF), which can cause "command not found" errors on Unix-like systems.
 
-then run
+To fix this issue, you can convert the line endings to Unix-style (LF).
+
+>You can use the dos2unix or sed command to do this.
+
+using dos2unix:
+```
+dos2unix build.sh
+```
+
+If dos2unix is not available, you can use sed:
+```
+sed -i 's/\r$//' build.sh
+```
+
+After running one of these commands,then run
 
 ```
 bash build.sh
