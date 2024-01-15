@@ -21,7 +21,7 @@ echo  "   \______)|_______)(_____)         |_|      |_|      |_||_||_||_|     |_
 
 
 ###########################################################################
-#Script Name : build.sh
+#Script Name : build&run.sh
 #Description : Used to build JAR file of java files from source directories
 #Creation Date : 12-20-2023
 #Author      : Manav
@@ -52,3 +52,25 @@ if [ $? -eq 0 ]; then
 else
     echo "Error during compilation."
 fi
+
+echo "Do you want to Run JAR?(Y/N)"
+
+read -r choice
+
+case $choice in
+  Y)
+    cd "$JAR_FOLDER" || exit
+    java -jar "$JAR_NAME"
+    ;;
+  N)
+    echo "Exiting"
+    exit
+    ;;
+  *)
+    echo "Invalid option!"
+    echo "Exiting"
+    exit
+    ;;
+  esac
+
+
