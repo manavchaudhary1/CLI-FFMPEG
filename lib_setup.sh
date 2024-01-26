@@ -19,47 +19,40 @@ mkdir -p "$LIBRARY_DIR"
 
 echo "Creating lib folder..."
 
-echo "Download LIB"
-echo "win or linux :"
-read -r OS
+# Determine the operating system type
+OS=$(uname -s | tr '[:upper:]' '[:lower:]')
+
+echo "Detected OS: $OS"
 
 echo "Downloading Library for $OS"
 
 case $OS in
-  win)
+  msys*|mingw*|cygwin*)  # Windows
     cd "$LIBRARY_DIR" || exit
     git clone https://gitlab.com/manavchaudhary1/ffmpeg_lib_window.git
     cd ffmpeg_lib_window || exit
     tar -xf ffmpeg.tar.gz -C "$userHome/$LIBRARY_DIR"
-    # check if tar extracted successfully
     if [ $? -eq 0 ]; then
       echo "Library Downloaded Successfully..."
     fi
-
     cd ..
-
     rm -rf ffmpeg_lib_window
-    # Check if Removing tar file Successfully
     if [ $? -eq 0 ]; then
       echo "Exiting.."
     else
       echo "Error removing tar file. Manually remove tar file in $LIBRARY_DIR folder"
     fi
     ;;
-  linux)
+  linux*)
     cd "$LIBRARY_DIR" || exit
     git clone https://gitlab.com/manavchaudhary1/ffmpeg_lib_linux.git
     cd ffmpeg_lib_linux || exit
     tar -xf ffmpeg.tar.gz -C "$userHome/$LIBRARY_DIR"
-    # check if tar extracted successfully
     if [ $? -eq 0 ]; then
       echo "Library Downloaded Successfully..."
     fi
-
     cd ..
-
     rm -rf ffmpeg_lib_linux
-    # Check if Removing tar file Successfully
     if [ $? -eq 0 ]; then
       echo "Exiting.."
     else
@@ -67,6 +60,6 @@ case $OS in
     fi
     ;;
   *)
-    echo "Invalid option. Please choose 'win' or 'linux'."
+    echo "Unsupported or unknown operating system: $OS"
     ;;
 esac
