@@ -37,7 +37,7 @@ bash lib_setup.sh
 
 **Windows**
 
-**Use GitBash**
+**Use GitBash\CygWIN**
 
 ```
 cd \path\to\project\CLI-FFMPEG
