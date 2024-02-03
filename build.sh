@@ -9,16 +9,19 @@ JAR_FOLDER="jar"
 
 clear
 
-#figlet -c "FFMPEG_CLI" Not available in Windows
-echo "Building CLI-FFMPEG"
-echo
-echo  "    ______  _        _____           _______  _______  ______   ______  _______  ______   "
-echo  "   / _____)| |      (_____)         (_______)(_______)|  ___ \ (_____ \(_______)/ _____)  "
-echo  "  | /      | |         _      ___    _____    _____   | | _ | | _____) )_____  | /  ___   "
-echo  "  | |      | |        | |    (___)  |  ___)  |  ___)  | || || ||  ____/|  ___) | | (___)  "
-echo  "  | \_____ | |_____  _| |_          | |      | |      | || || || |     | |_____| \____/|  "
-echo  "   \______)|_______)(_____)         |_|      |_|      |_||_||_||_|     |_______)\_____/   "
+#Print Application Name
+case $OS in
+  Windows*|mysis*|mingw*|cygwin*) # windows
+    cd lib/figlet || exit
+    ./figlet Hermes Stream
+    cd .. &&  cd ..
+    ;;
+  linux*) #linux
+    figlet Hermes Stream
+    ;;
+esac
 
+echo "Building CLI-FFMPEG"
 
 ###########################################################################
 #Script Name : build.sh
