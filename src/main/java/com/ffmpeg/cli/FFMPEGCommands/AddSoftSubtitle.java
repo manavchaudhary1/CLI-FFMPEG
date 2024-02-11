@@ -22,7 +22,7 @@ public class AddSoftSubtitle {
         String subtitleCodec = videoCodec.equals("libx264") ? "mov_text" : "srt";
 
         String ffmpegCommand = ffmpegPath +" -i " + inputFilePath + " -i " + inputFilePathSub + " -c:s "+ subtitleCodec +" -c:v " + videoCodec + " -c:a copy " + outputFilePath;
-        System.out.println(ffmpegCommand);
+
         // Execute the FFMPEG command
         try{
             ProcessBuild.executeCommand(ffmpegCommand);

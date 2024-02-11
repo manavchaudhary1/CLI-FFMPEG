@@ -1,9 +1,6 @@
 package com.ffmpeg.cli;
 
-import com.ffmpeg.cli.FFMPEGCommands.AddSoftSubtitle;
-import com.ffmpeg.cli.FFMPEGCommands.BurnSubtitle;
-import com.ffmpeg.cli.FFMPEGCommands.ConvertToAudio;
-import com.ffmpeg.cli.FFMPEGCommands.ExtractSubtitle;
+import com.ffmpeg.cli.FFMPEGCommands.*;
 
 import java.io.FileNotFoundException;
 import java.io.IOException;
@@ -12,11 +9,12 @@ import java.util.Scanner;
 public class Switch {
     public static void choice(){
         System.out.println("--------FFMPEG CLI--------");
-        System.out.println("1) Convert Video to audio");
-        System.out.println("2) Encode Soft Subtitle into Video");
-        System.out.println("3) Burn Subtitle into Video");
-        System.out.println("4) Extract Subtitle from Video");
-        System.out.println("5) Exit");
+        System.out.println("1) Convert Video Extention");
+        System.out.println("2) Convert Video to audio");
+        System.out.println("3) Encode Soft Subtitle into Video");
+        System.out.println("4) Burn Subtitle into Video");
+        System.out.println("5) Extract Subtitle from Video");
+        System.out.println("6) Exit");
 
         Scanner sc = new Scanner(System.in);
         System.out.println("Enter Choice:");
@@ -25,6 +23,13 @@ public class Switch {
         try {
             switch (choice) {
                 case 1:
+                    //Change Video Format
+                    System.out.println("Enter location of video with ext:");
+                    String inputFilePathVid = sc.next();
+
+                    ChangeVidExtention.changeVidExt(inputFilePathVid);
+                    break;
+                case 2:
                     //Convert Video to audio
                     System.out.println("Enter location of video with ext:");
                     String inputFilePathAudio = sc.next();
@@ -34,7 +39,7 @@ public class Switch {
 
                     ConvertToAudio.convertVideoToAudio(inputFilePathAudio, outputFileNameAudio);
                     break;
-                case 2:
+                case 3:
                     //Encode Soft subs to video
                     System.out.println("Enter location of video with ext:");
                     String inputFilePathEncode = sc.next();
@@ -48,7 +53,7 @@ public class Switch {
 
                     AddSoftSubtitle.encodeSoftSubtitleIntoVideo(inputFilePathEncode, outputFileNameEncode, inputFilePathSubEncode);
                     break;
-                case 3:
+                case 4:
                     //Encode Hard subs to video
                     System.out.println("Enter location of video with ext:");
                     String inputFilePathBurn = sc.next();
@@ -65,7 +70,7 @@ public class Switch {
                     BurnSubtitle.burnSubtitleIntoVideo(inputFilePathBurn, inputFilePathSubBurn, outputFileBurn);
                     break;
 
-                case 4:
+                case 5:
                     //Extract soft subs from video
                     System.out.println("Enter location of video with ext:");
                     String inputFilePathExtract = sc.next();
@@ -75,7 +80,7 @@ public class Switch {
 
                     ExtractSubtitle.extractSubtitleFromVideo(inputFilePathExtract, outputFileNameExtract);
                     break;
-                case 5:
+                case 6:
                     System.out.println("Exited Successfully....");
                     System.exit(0);
                     break;
