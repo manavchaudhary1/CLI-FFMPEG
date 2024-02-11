@@ -3,7 +3,7 @@
 # Define your source code and output directories
 SOURCE_DIR="src"
 OUTPUT_DIR="out"
-JAR_NAME="FFMPEG_CLI.jar"
+JAR_NAME="CLI_FFMPEG.jar"
 MANIFEST_FILE="Manifest.txt"
 JAR_FOLDER="jar"
 
