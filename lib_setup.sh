@@ -4,7 +4,7 @@
 LIBRARY_DIR="lib"
 userHome="$PWD"
 
-echo"Downloading Dependencies."
+echo "Downloading Dependencies."
 
 # Create output directory if it doesn't exist
 mkdir -p "$LIBRARY_DIR"
