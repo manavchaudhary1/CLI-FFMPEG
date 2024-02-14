@@ -8,33 +8,6 @@ Used for simple ffmpeg commands
 
 **Install FFMPEG EXE**
 
-**Linux/WSL**
-
-```
-cd \path\to\project\CLI-FFMPEG
-```
-
-The script has Windows-style line endings (CRLF), which can cause "command not found" errors on Unix-like systems.
-
-To fix this issue, you can convert the line endings to Unix-style (LF).
-
->You can use the dos2unix or sed command to do this.
-
-using dos2unix:
-```
-dos2unix lib_setup.sh
-```
-
-If dos2unix is not available, you can use sed:
-```
-sed -i 's/\r$//' lib_setup.sh
-```
-
-then run,
-```
-bash lib_setup.sh
-```
-
 **Windows**
 
 **Use GitBash\CygWIN**
@@ -51,36 +24,6 @@ then run,
 ***Building Process***
 
 Make sure you are in root directory of project
-
-**Linux/WSL**
-
-```
-chmod +x build.sh
-```
-```
-chmod +x lib/ffmpeg/bin/ffmpeg
-```
-The script has Windows-style line endings (CRLF), which can cause "command not found" errors on Unix-like systems.
-
-To fix this issue, you can convert the line endings to Unix-style (LF).
-
->You can use the dos2unix or sed command to do this.
-
-using dos2unix:
-```
-dos2unix build.sh
-```
-
-If dos2unix is not available, you can use sed:
-```
-sed -i 's/\r$//' build.sh
-```
-
-After running one of these commands,then run
-
-```
-bash build.sh
-```
 
 **Windows**
 
