@@ -52,7 +52,7 @@ public class ChangeVidExtention{
         }
 
         //Output File Location
-        String outputFilePath = projectPath+"output/"+outputFileName;
+        String outputFilePath = projectPath+"/output/"+outputFileName;
 
         String ffmpegCommand = ffmpegPath + " -i " + inputVidPath + " " + outputFilePath;
 
