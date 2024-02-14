@@ -5,6 +5,11 @@ import java.io.IOException;
 
 public class ExtractSubtitle {
     public static void extractSubtitleFromVideo(String inputFilePath, String outputFileName) throws IOException {
+
+        //ANSI Colors Codes
+        String ANSI_RESET = "\u001B[0m";
+        String ANSI_RED = "\u001B[31m";
+
         // Get the project path
         String projectPathWithJAR = System.getProperty("user.dir");
         //Remove jar from projectPath
@@ -20,7 +25,7 @@ public class ExtractSubtitle {
         // Execute the FFMPEG command
         try{
             ProcessBuild.executeCommand(ffmpegCommand);
-            System.out.println("Output File saved at Location :"+outputFilePath);
+            System.err.println(ANSI_RED + "Output file name cannot be empty." + ANSI_RESET);
         }catch (Exception e){
             e.getStackTrace();
         }

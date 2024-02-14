@@ -18,14 +18,14 @@ echo "Detected OS: $OS"
 
 echo "Downloading Dependencies for $OS"
 
- #Installing Figlet LIB
+#Installing Figlet LIB
 
 case $OS in
   mysis*|mingw*|cygwin*) # windows
   cd "$LIBRARY_DIR" || exit
   git clone https://gitlab.com/manavchaudhary1/figlet.git
   if [ $? -eq 0 ]; then
-        echo "Dependencies Downloaded Successfully..."
+        echo "Figlet Dependencies Downloaded Successfully..."
   fi
   ;;
  linux*)
@@ -42,7 +42,14 @@ case $OS in
     ;;
 esac
 
-#clear
+# Installing picocli JAR
+cd "$userHome/$LIBRARY_DIR" || exit
+git clone https://gitlab.com/manavchaudhary1/picocli.git
+if [ $? -eq 0 ]; then
+  echo "Picocli Dependencies Downloaded Successfully..."
+fi
+
+clear
 
 #Print Application Name
 
