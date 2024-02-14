@@ -25,9 +25,6 @@ case $OS in
     ./figlet "Hermes Stream"
     cd .. &&  cd ..
     ;;
-  linux*) #linux
-    figlet "Hermes Stream"
-    ;;
 esac
 
 echo "Building CLI-FFMPEG"
