@@ -59,4 +59,3 @@ clear
     else
       echo "Error removing tar file. Manually remove tar file in $LIBRARY_DIR folder"
     fi
-    ;;
