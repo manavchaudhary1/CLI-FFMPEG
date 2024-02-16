@@ -6,7 +6,6 @@ import picocli.CommandLine.Command;
 
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
-
 import java.io.IOException;
 import java.util.Scanner;
 
@@ -117,7 +116,8 @@ public class Switch{
             System.out.println(ANSI_GREEN + "Operation Successfull!" + ANSI_RESET);
             sc.close();
         } catch (Exception e) {
-            System.out.println(ANSI_PURPLE +"An unexpected error occurred: " + ANSI_RESET + ANSI_RED + e.getMessage() +ANSI_RESET);
+            System.out.println(ANSI_PURPLE +"An unexpected error occurred: "
+                    + ANSI_RESET + ANSI_RED + e.getMessage() +ANSI_RESET);
         }
     }
 

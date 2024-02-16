@@ -18,6 +18,7 @@ public class ProcessBuild {
         String Italic = "\u001B[3m";
 
         ProcessBuilder processBuilder = new ProcessBuilder(command.split("\\s+"));
+
         processBuilder.redirectErrorStream(true);  // Redirect error stream to input stream
 
         try {

@@ -9,17 +9,21 @@ public class AddSoftSubtitle {
         //ANSI Colors Codes
         String ANSI_RESET = "\u001B[0m";
         String ANSI_RED = "\u001B[31m";
-        
+
         // Get the project path
         String projectPathWithJAR = System.getProperty("user.dir");
-        //Remove jar from projectPath
-        String projectPath = projectPathWithJAR.replace("jar","");
+
+        // Remove "jar" from the end of the projectPath, if it exists
+        String jarSuffix = "jar";
+        String projectPath = projectPathWithJAR.endsWith(jarSuffix) ? projectPathWithJAR.substring(0, projectPathWithJAR.length() - jarSuffix.length()) : projectPathWithJAR;
+
+
 
         // Construct the ffmpegPath using the projectPath
         String ffmpegPath = projectPath + "/lib/ffmpeg/bin/ffmpeg";
 
         //Output File Location
-        String outputFilePath = projectPath+"output/"+outputFileName;
+        String outputFilePath = projectPath+"/output/"+outputFileName;
         
         String videoCodec = outputFileName.matches("(?i).*mp4") ? "libx264" : "libx265";
 

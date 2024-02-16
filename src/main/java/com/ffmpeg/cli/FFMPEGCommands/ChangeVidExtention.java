@@ -21,8 +21,11 @@ public class ChangeVidExtention{
 
         // Get the project path
         String projectPathWithJAR = System.getProperty("user.dir");
-        //Remove jar from projectPath
-        String projectPath = projectPathWithJAR.replace("jar","");
+
+        // Remove "jar" from the end of the projectPath, if it exists
+        String jarSuffix = "jar";
+        String projectPath = projectPathWithJAR.endsWith(jarSuffix) ? projectPathWithJAR.substring(0, projectPathWithJAR.length() - jarSuffix.length()) : projectPathWithJAR;
+
 
         // Construct the ffmpegPath using the projectPath
         String ffmpegPath = projectPath + "/lib/ffmpeg/bin/ffmpeg";
